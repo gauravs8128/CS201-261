@@ -13,7 +13,7 @@
 
 A = [1, 2, 1,9,6,7,3,4,5,-1]
 print(nextGreaterElements(A)) '''
-
+#the second commented code gives wrong output
 '''def nextGreaterElements(A):
     n = len(A)
     result = [-1] * n  
@@ -31,12 +31,12 @@ print(nextGreaterElements(A)) '''
 
 A = [1, 2, 1, 9, 6, 7, 3, 4, 5, -1]
 print(nextGreaterElements(A))'''
-
+# this code is correct and is executed without using pop and append
 def nextGreaterElements(A):
     n = len(A)
     result = [-1] * n  
-    answer = []  # Stack to store indices
-    top = -1  # Top of the stack index
+    answer = []  
+    top = -1 
 
     for i in range(2 * n):
         while top >= 0 and A[answer[top]] < A[i % n]:
